@@ -184,7 +184,36 @@
   .skill-card li{ color:var(--muted); font-size:0.88rem; padding:4px 0; }
   .skill-card li::before{ content:'— '; color:var(--card-color, var(--cyan)); }
 
-  /* ============ PROJECTS — detected objects ============ */
+  /* ============ DESIGN GALLERY ============ */
+  .gallery{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; }
+  .gallery-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:8px;
+    overflow:hidden; transition:border-color 0.25s, transform 0.25s;
+  }
+  .gallery-card:hover{ border-color:var(--magenta); transform:translateY(-3px); }
+  .gallery-img-wrap{ position:relative; }
+  .gallery-img-wrap img,
+  .gallery-img-wrap video{ display:block; width:100%; height:320px; object-fit:cover; background:#000; }
+  .gallery-img-wrap .glabel{
+    position:absolute; top:12px; left:12px;
+    font-family:'JetBrains Mono', monospace; font-size:0.68rem; text-transform:uppercase;
+    letter-spacing:0.06em; padding:4px 9px; border-radius:3px; font-weight:600;
+    color:#0B0E14; background:var(--yellow);
+  }
+  .gallery-body{ padding:20px 22px; }
+  .gallery-body h5{ font-size:1.02rem; font-weight:600; margin-bottom:6px; }
+  .gallery-body p{ color:var(--muted); font-size:0.88rem; }
+  .gallery-body .gtools{ margin-top:10px; font-family:'JetBrains Mono', monospace; font-size:0.72rem; color:var(--cyan); }
+
+  .video-note{
+    margin-top:22px; border:1px dashed var(--line); border-radius:8px; padding:20px 22px;
+    color:var(--muted); font-size:0.9rem; display:flex; align-items:center; gap:14px;
+  }
+  .video-note .vicon{
+    width:34px; height:34px; border-radius:50%; border:1.5px solid var(--magenta); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; color:var(--magenta); font-family:'JetBrains Mono',monospace; font-size:0.8rem;
+  }
+
   .proj{
     border:1px solid var(--line); border-radius:8px; background:var(--surface);
     padding:28px 30px; margin-bottom:20px; position:relative;
@@ -239,6 +268,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#design">Design</a></li>
     <li><a href="#experience">Timeline</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -263,7 +293,7 @@
       <div class="hero-photo-frame">
         <span class="plabel">ASHISH R.</span>
         <img src="profile.jpg" alt="Ashish Rajbahak">
-        <span class="pconf"></span>
+        <span class="pconf">confidence: 0.99</span>
       </div>
     </div>
   </div>
@@ -284,10 +314,10 @@
     <div class="info-card">
       <h4>Profile</h4>
       <div class="info-row"><span>Location</span><span>Kathmandu, Nepal</span></div>
-      <div class="info-row"><span>Phone</span><span>9866041436</span></div>
+      <div class="info-row"><span>Phone</span><span>986-604-1436</span></div>
       <div class="info-row"><span>Email</span><span>rajbahak508@gmail.com</span></div>
       <div class="info-row"><span>Degree</span><span>BIT (Ongoing)</span></div>
-      <div class="info-row"><span>College</span><span>Mid-Valley International College</span></div>
+      <div class="info-row"><span>College</span><span>Mid-Valley College</span></div>
     </div>
   </div>
 </section>
@@ -398,6 +428,93 @@
   </div>
 </section>
 
+<section id="design">
+  <div class="section-head">
+    <span class="section-num mono">03.5</span>
+    <h2 class="section-title display">Graphic Design & Video Editing</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <span class="glabel">poster · print</span>
+        <img src="design-mvic-poster.png" alt="Mid-Valley International College admission poster">
+      </div>
+      <div class="gallery-body">
+        <h5>College Admission Campaign Poster</h5>
+        <p>Layout and copy design for a college admissions poster — combining brand marks, a real campus photo, and clear program/CTA hierarchy for print and social use.</p>
+        <div class="gtools">tools: Canva · Photoshop</div>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <span class="glabel">course ad</span>
+        <img src="design-graphx-poster.png" alt="GraphX Design course advertisement poster">
+      </div>
+      <div class="gallery-body">
+        <h5>Course Advertisement Poster</h5>
+        <p>Bold typography-led poster for a design course promotion, built around a top-down workspace photo, batch schedule, and a strong red/purple accent system.</p>
+        <div class="gtools">tools: Canva · Photoshop</div>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <span class="glabel">thumbnail</span>
+        <img src="thumb-valorant.jpg" alt="Valorant montage YouTube thumbnail">
+      </div>
+      <div class="gallery-body">
+        <h5>Valorant Montage Thumbnail</h5>
+        <p>Gaming thumbnail with layered gameplay capture, motion streaks, logo placement, and sticker overlays built for click-through appeal.</p>
+        <div class="gtools">tools: Picsart · Photoshop</div>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <span class="glabel">thumbnail</span>
+        <img src="thumb-gta.jpg" alt="GTA Online stunt video YouTube thumbnail">
+      </div>
+      <div class="gallery-body">
+        <h5>GTA Online Thumbnail</h5>
+        <p>Channel-branded thumbnail for a stunt/race clip, framed around the in-game HUD with a custom logo watermark.</p>
+        <div class="gtools">tools: Picsart · Photoshop</div>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <span class="glabel">photo edit</span>
+        <img src="photo-edit-1.jpg" alt="Edited photo">
+      </div>
+      <div class="gallery-body">
+        <h5>Photo Edit</h5>
+        <p>Retouch and color/effects work done in Picsart, applying filters and detail edits to a personal photo.</p>
+        <div class="gtools">tools: Picsart</div>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <div class="gallery-img-wrap">
+        <span class="glabel">video</span>
+        <video src="edit-gta-clip.mp4" controls preload="metadata"></video>
+      </div>
+      <div class="gallery-body">
+        <h5>GTA Online Stunt Clip</h5>
+        <p>Edited gameplay clip with HUD overlays and channel branding, cut for a stunt/race highlight upload.</p>
+        <div class="gtools">tools: CapCut · Filmora</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-note">
+    <span class="vicon">▶</span>
+    <span>Full-length montage edit (Human_Video.mp4) is too large to bundle here — host it on YouTube or Drive and I can swap this note for a clickable thumbnail link.</span>
+  </div>
+</section>
+
 <section id="experience">
   <div class="section-head">
     <span class="section-num mono">04</span>
@@ -407,10 +524,10 @@
   <div class="timeline">
     <div class="t-item">
       <h5>Bachelor of Information Technology (BIT)</h5>
-      <div class="t-sub">Mid-Valley International College · Ongoing</div>
+      <div class="t-sub">Mid-Valley College · Ongoing</div>
     </div>
     <div class="t-item">
-      <h5>+2 (Computer Science)</h5>
+      <h5>+2 (Science)</h5>
       <div class="t-sub">Nepal Kasthamandap Secondary School / College</div>
     </div>
     <div class="t-item">
@@ -426,7 +543,7 @@
     <p>Reach out if you're hiring or collaborating.</p>
     <div class="contact-links">
       <a href="mailto:rajbahak508@gmail.com">rajbahak508@gmail.com</a>
-      <a href="tel:9866041436">9866041436</a>
+      <a href="tel:9866041436">986-604-1436</a>
       <a href="#about">Kathmandu, Nepal</a>
     </div>
   </div>
